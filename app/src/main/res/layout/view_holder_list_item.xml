@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                                   xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:tools="http://schemas.android.com/tools"
+                                   android:id="@+id/cardView"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="500dp"
+                                   android:layout_marginStart="8dp"
+                                   android:layout_marginEnd="8dp"
+                                   android:layout_marginBottom="8dp"
+                                   card_view:cardBackgroundColor="#fff"
+                                   card_view:cardCornerRadius="5dp"
+                                   card_view:cardElevation="4dp"
+                                   card_view:cardUseCompatPadding="true"
+                                   card_view:layout_constraintBottom_toBottomOf="parent"
+                                   card_view:layout_constraintEnd_toEndOf="parent"
+                                   card_view:layout_constraintStart_toStartOf="parent"
+                                   card_view:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+
+        <ImageView android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="3"
+
+
+                   tools:src="@drawable/ic_image_search"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:orientation="vertical"
+                      android:layout_weight="1"
+                      android:layout_margin="16dp"
+        >
+            <TextView
+                    android:id="@+id/article_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:text="article_title article_title article_title article_title article_title article_titlearticle_titlearticle_title"/>
+            <TextView
+                    android:id="@+id/article_made_by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    tools:text="by : LinkDevelopment.com"/>
+            <TextView
+                    android:id="@+id/article_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    tools:text="April 3, 2017"
+            />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
