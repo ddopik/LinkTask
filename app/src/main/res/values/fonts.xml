@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_head">26sp</dimen>
+    <dimen name="title_sub_head">21sp</dimen>
+    <dimen name="title_sub_head_mid">14sp</dimen>
+
+    <dimen name="title_confirm_head">26sp</dimen>
+</resources>

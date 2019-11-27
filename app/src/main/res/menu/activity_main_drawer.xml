@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/nav_explore"
+                android:icon="@drawable/ic_explore"
+                android:title="@string/explore"/>
+
+        <item
+                android:id="@+id/nav_life_chat"
+                android:icon="@drawable/ic_life_chat"
+                android:title="@string/life_chat"/>
+        <item
+                android:id="@+id/nav_gallery"
+                android:icon="@drawable/ic_gallery"
+                android:title="@string/menu_gallery"/>
+        <item
+                android:id="@+id/nav_wish_list"
+                android:icon="@drawable/ic_wish_list"
+                android:title="@string/wish_list"/>
+        <item
+                android:id="@+id/nav_e_magazine"
+                android:icon="@drawable/ic_e_magazine"
+                android:title="@string/e_magazine"/>
+    </group>
+
+
+</menu>
