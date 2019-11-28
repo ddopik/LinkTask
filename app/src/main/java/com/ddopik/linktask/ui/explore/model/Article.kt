@@ -1,4 +1,4 @@
-package com.ddopik.linktask.ui.home.model
+package com.ddopik.linktask.ui.explore.model
 
 import android.os.Parcel
 import android.os.Parcelable

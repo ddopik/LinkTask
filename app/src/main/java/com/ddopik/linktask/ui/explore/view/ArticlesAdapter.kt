@@ -1,24 +1,28 @@
-package com.ddopik.linktask.ui.home.view
+package com.ddopik.linktask.ui.explore.view
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.ddopik.attendonb.app.LinkTaskApp
 import com.ddopik.linktask.R
-import com.ddopik.linktask.ui.home.model.Article
+import com.ddopik.linktask.ui.explore.model.Article
+import java.util.ArrayList
 
-class ArticlesAdapter(val userList: MutableList<Article>) : RecyclerView.Adapter<ArticlesAdapter.ArticlesViewHolder>() {
+class ArticlesAdapter(val articlesList: MutableList<Article>) : RecyclerView.Adapter<ArticlesAdapter.ArticlesViewHolder>(),
+    Filterable {
 
     lateinit var filteredArticleList: MutableList<Article>
     var onArticleSelected: OnArticleSelected? = null
 
     init {
-        filteredArticleList = userList
+        filteredArticleList = articlesList
     }
 
 
@@ -76,4 +80,37 @@ class ArticlesAdapter(val userList: MutableList<Article>) : RecyclerView.Adapter
     interface OnArticleSelected {
         fun onArticleClickListener(article: Article?)
     }
+
+    override fun getFilter(): Filter {
+        return object : Filter() {
+            override fun performFiltering(charSequence: CharSequence): Filter.FilterResults {
+                val charString = charSequence.toString()
+                if (charString.isEmpty()) {
+                    filteredArticleList = articlesList
+                } else {
+                    val filteredList = ArrayList<Article>()
+                    for (row in articlesList) {
+
+                        // name match condition. this might differ depending on your requirement
+                        // here we are looking for name or phone number match
+                        if (row.title?.toLowerCase()?.contains(charString.toLowerCase())!!) {
+                            filteredList.add(row)
+                        }
+                    }
+                    filteredArticleList = filteredList
+                }
+
+                val filterResults = FilterResults()
+                filterResults.values = filteredArticleList
+                return filterResults
+            }
+
+            override fun publishResults(charSequence: CharSequence, filterResults: Filter.FilterResults) {
+                filteredArticleList = filterResults.values as ArrayList<Article>
+                filteredArticleList.clear()
+                notifyDataSetChanged()
+            }
+        }
+    }
+
 }

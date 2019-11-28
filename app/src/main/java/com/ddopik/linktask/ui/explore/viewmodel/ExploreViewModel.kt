@@ -1,4 +1,4 @@
-package com.ddopik.linktask.ui.home.viewmodel
+package com.ddopik.linktask.ui.explore.viewmodel
 
 import CustomErrorUtils
 import android.annotation.SuppressLint
@@ -8,23 +8,23 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProviders
 import com.ddopik.attendonb.network.BaseNetWorkApi
-import com.ddopik.linktask.ui.home.model.Article
-import com.ddopik.linktask.ui.home.model.ArticlesResponse
+import com.ddopik.linktask.ui.explore.model.Article
+import com.ddopik.linktask.ui.explore.model.ArticlesResponse
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.functions.BiFunction
 import io.reactivex.schedulers.Schedulers
 
 
-class HomeViewModel : ViewModel() {
+class ExploreViewModel : ViewModel() {
 
-    private val TAG=HomeViewModel::class.java.name
+    private val TAG=ExploreViewModel::class.java.name
 
 
     companion object{
 
-        fun getInstance(fragment:Fragment):HomeViewModel{
-            return ViewModelProviders.of(fragment).get(HomeViewModel::class.java)
+        fun getInstance(fragment:Fragment):ExploreViewModel{
+            return ViewModelProviders.of(fragment).get(ExploreViewModel::class.java)
         }
     }
 

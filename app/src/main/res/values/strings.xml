@@ -26,4 +26,7 @@
     <string name="search">Search</string>
     <string name="by">By :</string>
     <string name="open_web_site">Open website</string>
+    <string name="error_open_webpage">No application can handle this request. Please install a web browser or check your
+        URL.
+    </string>
 </resources>

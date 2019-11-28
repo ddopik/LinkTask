@@ -378,4 +378,5 @@ public class Utilities {
             view.requestLayout();
         }
     }
+
 }

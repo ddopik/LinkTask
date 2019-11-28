@@ -1,4 +1,4 @@
-package com.ddopik.linktask.ui.home.model
+package com.ddopik.linktask.ui.explore.model
 
 import com.google.gson.annotations.Expose
 

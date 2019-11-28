@@ -1,6 +1,6 @@
 package com.ddopik.attendonb.network
 
-import com.ddopik.linktask.ui.home.model.ArticlesResponse
+import com.ddopik.linktask.ui.explore.model.ArticlesResponse
 import com.rx2androidnetworking.Rx2AndroidNetworking
 import io.reactivex.Observable
 import okhttp3.CipherSuite
@@ -37,12 +37,14 @@ class BaseNetWorkApi {
 
         fun getArticleList_1(): Observable<ArticlesResponse> {
             return Rx2AndroidNetworking.get(ARTICLE_1_URL)
+                .responseOnlyIfCached
                 .build()
                 .getObjectObservable(ArticlesResponse::class.java)
 
 
         }    fun getArticleList_2(): Observable<ArticlesResponse> {
             return Rx2AndroidNetworking.get(ARTICLE_2_URL)
+                .responseOnlyIfCached
                 .build()
                 .getObjectObservable(ArticlesResponse::class.java)
 
