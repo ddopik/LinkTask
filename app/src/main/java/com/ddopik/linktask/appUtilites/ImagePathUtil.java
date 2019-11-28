@@ -1,4 +1,4 @@
-package com.ddopik.linktask.utilites;
+package com.ddopik.linktask.appUtilites;
 
 import android.content.ContentResolver;
 import android.content.ContentUris;

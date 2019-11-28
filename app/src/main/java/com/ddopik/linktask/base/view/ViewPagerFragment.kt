@@ -1,4 +1,4 @@
-package com.ddopik.linktask.base
+package com.ddopik.linktask.base.view
 
 import android.os.Bundle
 import android.view.*
@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
-import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
 
 import com.google.android.material.tabs.TabLayout
@@ -33,7 +32,7 @@ abstract class ViewPagerFragment : Fragment() {
 
     abstract val viewUpButton :Boolean ?
 
-    abstract val viewPagerAdapter :ViewPagerAdapter
+    abstract val viewPagerAdapter : ViewPagerAdapter
 
     abstract fun getToolbar(): Toolbar?
 

@@ -1,4 +1,4 @@
-package com.ddopik.linktask.utilites;
+package com.ddopik.linktask.appUtilites;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

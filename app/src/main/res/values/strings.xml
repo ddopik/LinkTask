@@ -23,4 +23,7 @@
     <string name="wish_list">Wish List</string>
     <string name="welcome">Welcome</string>
     <string name="link_user">Abd alla Maged Shawky</string>
+    <string name="search">Search</string>
+    <string name="by">By :</string>
+    <string name="open_web_site">Open website</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.ddopik.linktask.base;
+package com.ddopik.linktask.base.view;
 
 
 

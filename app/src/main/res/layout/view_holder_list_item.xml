@@ -4,7 +4,7 @@
                                    xmlns:tools="http://schemas.android.com/tools"
                                    android:id="@+id/cardView"
                                    android:layout_width="match_parent"
-                                   android:layout_height="500dp"
+                                   android:layout_height="400dp"
                                    android:layout_marginStart="8dp"
                                    android:layout_marginEnd="8dp"
                                    android:layout_marginBottom="8dp"
@@ -17,22 +17,26 @@
                                    card_view:layout_constraintStart_toStartOf="parent"
                                    card_view:layout_constraintTop_toTopOf="parent">
 
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:orientation="vertical">
+    <LinearLayout
+            android:id="@+id/article_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
 
-        <ImageView android:layout_width="match_parent"
-                   android:layout_height="0dp"
-                   android:layout_weight="3"
+        <ImageView
+                android:id="@+id/img_article"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/ic_image_search"/>
 
-
-                   tools:src="@drawable/ic_image_search"/>
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="0dp"
                       android:orientation="vertical"
                       android:layout_weight="1"
-                      android:layout_margin="16dp"
+                      android:layout_margin="12dp"
         >
             <TextView
                     android:id="@+id/article_title"
@@ -40,6 +44,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="20sp"
+                    android:maxLines="2"
                     tools:text="article_title article_title article_title article_title article_title article_titlearticle_titlearticle_title"/>
             <TextView
                     android:id="@+id/article_made_by"
@@ -53,7 +58,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     tools:text="April 3, 2017"
-            />
+              />
         </LinearLayout>
 
 

@@ -1,4 +1,4 @@
-package com.ddopik.linktask.utilites;
+package com.ddopik.linktask.appUtilites;
 
 import com.bumptech.glide.annotation.GlideModule;
 import com.bumptech.glide.module.AppGlideModule;

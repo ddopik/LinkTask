@@ -6,13 +6,10 @@ import android.net.ConnectivityManager
 import android.os.Build
 import androidx.multidex.MultiDexApplication
 import com.androidnetworking.AndroidNetworking
-import com.ddopik.linktask.network.BasicAuthInterceptor
-import com.ddopik.linktask.utilites.networkstatus.NetworkChangeBroadcastReceiver
-import com.google.android.gms.security.ProviderInstaller
+import com.ddopik.attendonb.network.BaseNetWorkApi
 import com.ddopik.attendonb.utilites.networkstatus.NetworkStateChangeManager
-import okhttp3.OkHttpClient
+import com.ddopik.linktask.appUtilites.networkstatus.NetworkChangeBroadcastReceiver
 import java.io.File
-import javax.net.ssl.SSLContext
 
 
 class LinkTaskApp : MultiDexApplication() {
@@ -29,38 +26,11 @@ class LinkTaskApp : MultiDexApplication() {
 
     override fun onCreate() {
         super.onCreate()
-
-
-//        Utilities().printHashKey(app)
-        /**
-         * Required for Network Authority Access prior Api 19
-         * */
-        ProviderInstaller.installIfNeeded(applicationContext);
-        try {
-            val sslContext = SSLContext.getInstance("TLSv1.2")
-            sslContext.init(null, null, null)
-            sslContext.createSSLEngine();
-        } catch (e: java.lang.Exception) {
-            e.printStackTrace()
-        }
-
         app = this
-        LinkTaskApp.app = app as LinkTaskApp
 
-//        initFastAndroidNetworking(null,baseContext)
-        //        initRealm(); //--> [1]order is must
-        //        setRealmDefaultConfiguration(); //--> [2]order is must
-        //        intializeSteatho();
-        //        deleteCache(app);   ///for developing        ##################
-        //        initializeDepInj(); ///intializing Dagger Dependancy
 
-        if (Build.VERSION.SDK_INT == 19) {
-            try {
-                ProviderInstaller.installIfNeeded(this)
-            } catch (ignored: Exception) {
-            }
+        AndroidNetworking.initialize(applicationContext, BaseNetWorkApi.initNetWorkCirtefecate())
 
-        }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             networkStateChangeManager = NetworkStateChangeManager(this)
@@ -113,29 +83,5 @@ class LinkTaskApp : MultiDexApplication() {
 
     }
 
-
-
-
-
-
-    fun initFastAndroidNetworking(userToken: String?, context: Context) {
-
-        /**
-         * initializing block to add authentication to your Header Request
-         */
-        if (userToken != null) {
-            val basicAuthInterceptor = BasicAuthInterceptor(context)
-            basicAuthInterceptor.setUserToken(userToken)
-            val okHttpClient = OkHttpClient().newBuilder()
-                .addNetworkInterceptor(basicAuthInterceptor)
-                .build()
-            AndroidNetworking.initialize(context, okHttpClient)
-        } else {
-            /**
-             * default initialization
-             */
-            AndroidNetworking.initialize(context)
-        }
-    }
 
 }

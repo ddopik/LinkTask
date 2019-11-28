@@ -1,4 +1,4 @@
-package com.ddopik.linktask.utilites.networkstatus;
+package com.ddopik.linktask.appUtilites.networkstatus;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
+import android.widget.Toast;
+import com.ddopik.attendonb.app.LinkTaskApp;
 
 
 public class NetworkChangeBroadcastReceiver extends BroadcastReceiver {
@@ -19,6 +21,7 @@ public class NetworkChangeBroadcastReceiver extends BroadcastReceiver {
         boolean connected = networkInfo != null && networkInfo.isConnected();
         Log.e(TAG,"onReceive --->"+connected);
         if(!connected){
+            Toast.makeText(LinkTaskApp.Companion.getApp().getBaseContext(),"Check your internet connicetion",Toast.LENGTH_SHORT).show();
 //            RxEventBus.getInstance().post(new RxAppStatsEvent(RxAppStatsEvent.Type.ONLINE_DISCONNECTED, connected));
         }
 

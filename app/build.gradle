@@ -50,6 +50,9 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     implementation "android.arch.lifecycle:extensions:$kotlin_version"
+
+    implementation "androidx.fragment:fragment:1.2.0-rc02"
+
     // Fast Android Network
     implementation "com.amitshekhar.android:rx2-android-networking:$fast_android_network_version"
 

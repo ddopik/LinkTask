@@ -1,4 +1,4 @@
-package com.ddopik.linktask.utilites.rxeventbus;
+package com.ddopik.linktask.appUtilites.rxeventbus;
 
 import com.ddopik.attendonb.utilites.rxeventbus.RxAppStatsEvent;
 import com.ddopik.attendonb.utilites.rxeventbus.RxForceRefreshEvent;

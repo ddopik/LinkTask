@@ -1,4 +1,4 @@
-package com.ddopik.linktask.utilites;
+package com.ddopik.linktask.appUtilites;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;

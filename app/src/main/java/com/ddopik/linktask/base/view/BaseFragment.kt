@@ -28,7 +28,7 @@ abstract class BaseFragment : Fragment() {
         Toast.makeText(activity, msg, Toast.LENGTH_SHORT).show()
     }
 
-    protected abstract fun intiView();
+    protected abstract fun initView();
 
     protected abstract fun initObservers()
 

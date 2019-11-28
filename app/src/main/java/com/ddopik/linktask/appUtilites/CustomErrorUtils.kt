@@ -4,8 +4,8 @@ import android.util.Log
 import com.androidnetworking.error.ANError
 import com.ddopik.linktask.R
 import com.ddopik.linktask.base.commonModel.ErrorMessageResponse
-import com.ddopik.linktask.utilites.Constants
-import com.ddopik.linktask.utilites.rxeventbus.RxEventBus
+import com.ddopik.linktask.appUtilites.Constants
+import com.ddopik.linktask.appUtilites.rxeventbus.RxEventBus
 import com.ddopik.attendonb.app.LinkTaskApp
 import com.ddopik.attendonb.network.BaseNetWorkApi.Companion.STATUS_401
 import com.ddopik.attendonb.network.BaseNetWorkApi.Companion.STATUS_404

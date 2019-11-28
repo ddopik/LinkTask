@@ -6,8 +6,8 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.ddopik.linktask.utilites.Constants
-import com.ddopik.linktask.utilites.rxeventbus.RxEventBus
+import com.ddopik.linktask.appUtilites.Constants
+import com.ddopik.linktask.appUtilites.rxeventbus.RxEventBus
 import com.google.android.material.snackbar.Snackbar
 import com.ddopik.attendonb.utilites.rxeventbus.RxForceRefreshEvent
 
