@@ -13,17 +13,21 @@ import com.bumptech.glide.Glide
 import com.ddopik.attendonb.app.LinkTaskApp
 import com.ddopik.linktask.R
 import com.ddopik.linktask.ui.explore.model.Article
-import java.util.ArrayList
+import java.util.*
 
-class ArticlesAdapter(val articlesList: MutableList<Article>) : RecyclerView.Adapter<ArticlesAdapter.ArticlesViewHolder>(),
+class ArticlesAdapter(private val allArticlesList: MutableList<Article>) :
+    RecyclerView.Adapter<ArticlesAdapter.ArticlesViewHolder>(),
     Filterable {
 
-    lateinit var filteredArticleList: MutableList<Article>
-    var onArticleSelected: OnArticleSelected? = null
+
+    private val TAG = ArticlesAdapter::class.java.name
+    var filteredArticleList: MutableList<Article>
 
     init {
-        filteredArticleList = articlesList
+        filteredArticleList = allArticlesList
     }
+
+    var onArticleSelected: OnArticleSelected? = null
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticlesViewHolder {
@@ -52,7 +56,8 @@ class ArticlesAdapter(val articlesList: MutableList<Article>) : RecyclerView.Ada
 
 
         holder.articleTitle.text = filteredArticleList[position].title
-        holder.articleMadeBy.text =LinkTaskApp.app!!.baseContext.resources.getString(R.string.by)+ filteredArticleList[position].author
+        holder.articleMadeBy.text =
+            LinkTaskApp.app!!.baseContext.resources.getString(R.string.by) + filteredArticleList[position].author
         holder.articleDate.text = filteredArticleList[position].publishedAt?.substringBeforeLast("-")
 
 
@@ -84,12 +89,14 @@ class ArticlesAdapter(val articlesList: MutableList<Article>) : RecyclerView.Ada
     override fun getFilter(): Filter {
         return object : Filter() {
             override fun performFiltering(charSequence: CharSequence): Filter.FilterResults {
+                val filterResults = FilterResults()
+
                 val charString = charSequence.toString()
                 if (charString.isEmpty()) {
-                    filteredArticleList = articlesList
+                    filteredArticleList = allArticlesList
                 } else {
                     val filteredList = ArrayList<Article>()
-                    for (row in articlesList) {
+                    for (row in allArticlesList) {
 
                         // name match condition. this might differ depending on your requirement
                         // here we are looking for name or phone number match
@@ -97,20 +104,19 @@ class ArticlesAdapter(val articlesList: MutableList<Article>) : RecyclerView.Ada
                             filteredList.add(row)
                         }
                     }
-                    filteredArticleList = filteredList
-                }
+                    filterResults.count = filteredList.size
+                    filterResults.values = filteredList
 
-                val filterResults = FilterResults()
-                filterResults.values = filteredArticleList
+                }
                 return filterResults
             }
 
             override fun publishResults(charSequence: CharSequence, filterResults: Filter.FilterResults) {
-                filteredArticleList = filterResults.values as ArrayList<Article>
-                filteredArticleList.clear()
+                filteredArticleList = filterResults.values as MutableList<Article>
                 notifyDataSetChanged()
+
             }
         }
     }
-
 }
+

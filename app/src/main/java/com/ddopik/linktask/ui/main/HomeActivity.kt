@@ -38,6 +38,9 @@ class HomeActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         drawer.addDrawerListener(toggle)
         toggle.syncState()
         navigationView?.setNavigationItemSelectedListener(this)
+        /**
+         * default tap
+         * */
         onNavigationItemSelected(navigationView!!.menu.getItem(0))
     }
 
@@ -56,11 +59,17 @@ class HomeActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 return false
 
             }
+            /**
+             * Search Tab listener
+             * */
             override fun onQueryTextSubmit(query: String?): Boolean {
-                exploreFragmentListener?.onQueryComplete(query)
-
+                val listF=  supportFragmentManager.fragments
+                val frag =supportFragmentManager.findFragmentByTag(ExploreFragment.TAG)
+                if(frag?.tag == ExploreFragment.TAG) {
+                    exploreFragmentListener = frag as ExploreFragment
+                    exploreFragmentListener?.onQueryComplete(query)
+                 }
                 menu.findItem(R.id.ic_search).collapseActionView()
-
                 return true
 
             }
@@ -77,21 +86,17 @@ class HomeActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        // Handle navigation view item clicks here.
-        val id = item.itemId
-
-        ////////////////////
-        when (id) {
+         ////////////////////
+        when (item.itemId) {
             R.id.nav_explore -> {
                 val exploreFragment = ExploreFragment.getInstance()
                 supportFragmentManager.beginTransaction()
                     .replace(
                         R.id.home_swap_container,
                         exploreFragment,
-                        ExploreFragment::class.java.simpleName
+                        ExploreFragment.TAG
                     )
                     .commit()
-                exploreFragmentListener = exploreFragment
 
             }
             R.id.nav_life_chat -> {
@@ -133,12 +138,12 @@ class HomeActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 /**
                  * user have navigated to Main screen and first Activity in the stack
                  * */
-                supportFragmentManager.findFragmentByTag(ExploreFragment::class.java.simpleName)
+                supportFragmentManager.findFragmentByTag(ExploreFragment.TAG)
                 supportFragmentManager.beginTransaction()
                     .replace(
                         R.id.home_swap_container,
                         ExploreFragment.getInstance(),
-                        ExploreFragment::class.java.simpleName
+                        ExploreFragment.TAG
                     )
                     .commit()
                 nav_view.menu.getItem(0).isChecked = true
@@ -147,21 +152,6 @@ class HomeActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
     }
 
-    override fun onNewIntent(intent: Intent) {
-        super.onNewIntent(intent)
-        handleIntent(intent)
     }
 
 
-    private fun handleIntent(intent: Intent) {
-
-        if (Intent.ACTION_SEARCH == intent.action) {
-            val query = intent.getStringExtra(SearchManager.QUERY)
-            exploreFragmentListener?.onQueryComplete(query)
-
-
-        }
-    }
-
-
-}

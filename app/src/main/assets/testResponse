@@ -1,0 +1,87 @@
+{
+    "status": "ok",
+    "source": "the-next-web",
+    "sortBy": "top",
+    "articles": [
+        {
+            "author": "Mix",
+            "title": "Astro’s A50 wireless headset feels and sounds great (but it costs more than it should)",
+            "description": "When it comes to gaming, few things infuriate me more than an enemy catching me off-guard. But there’s not much you can do to prevent that from happening if your audio gear sucks — and I’ve had enough. For the past few weeks, I’ve been testing out the fourth iteration of the Astro A50 gaming […]",
+            "url": "https://thenextweb.com/plugged/2019/11/27/astro-a50-review-headset-gaming/",
+            "urlToImage": "https://img-cdn.tnwcdn.com/image/plugged?filter_last=1&fit=1280%2C640&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F11%2Flogitech-astro-a50-headset-gaming.jpg&signature=fb620123b3a68a2842fc6deb9f468bfc",
+            "publishedAt": "2019-11-27T15:25:09Z"
+        },
+        {
+            "author": "Callum Booth",
+            "title": "An iPhone 11 Pro Max review especially for you, human",
+            "description": "Reviewing an iPhone is not like covering any other device. People who are already in the Apple ecosystem will probably upgrade when they’re ready, not when you say so. And Android folks? Well, they aren’t going to suddenly jump ship because of a single article. Then you have specs. While companies like Huawei, Samsung, and […]",
+            "url": "https://thenextweb.com/plugged/2019/11/27/apple-iphone-11-pro-max-review-human/",
+            "urlToImage": "https://img-cdn.tnwcdn.com/image/plugged?filter_last=1&fit=1280%2C640&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F11%2Fheader-image-iphone-11-pro-max.png&signature=b1324b79f68b9ffa3e8873f515a85818",
+            "publishedAt": "2019-11-27T14:36:38Z"
+        },
+        {
+            "author": "Matthew Beedham",
+            "title": "Hackers mass-scan for Docker vulnerability to mine Monero cryptocurrency",
+            "description": "A hacking group is reportedly performing a mass-scan of the internet in search of vulnerable ports on systems using enterprise sandbox software Docker to mine cryptocurrency. According to security researchers at Bad Packets, the scans, which began over the weekend, identify vulnerabilities that allow bad actors to inject malicious code that deploys a cryptocurrency miner […]",
+            "url": "https://thenextweb.com/hardfork/2019/11/27/hackers-mass-scan-for-docker-vulnerability-to-mine-monero-cryptocurrency/",
+            "urlToImage": "https://img-cdn.tnwcdn.com/image/hardfork?filter_last=1&fit=1280%2C640&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F11%2FDocker-cryptocurrency-miner-crypto-monero-xmrig-blockchain-hard-fork-scan-malware-vulnerability.jpg&signature=949e07a5d41be4b86416a474707c5cf8",
+            "publishedAt": "2019-11-27T13:47:09Z"
+        },
+        {
+            "author": "Cara Curtis",
+            "title": "TikTok denies suspending makeup tutorial teen for raising awareness of China's detention camps",
+            "description": "A 17-year old Muslim girl on TikTok has been uploading now-viral makeup tutorials, but with a political twist. In a video shared by “@getmefamouspartthree,” Feroza Aziz seemingly ...",
+            "url": "https://thenextweb.com/tech/2019/11/27/tiktok-denies-suspending-makeup-tutorial-teen-for-raising-awareness-of-chinas-detention-camps/",
+            "urlToImage": "https://img-cdn.tnwcdn.com/image/tnw?filter_last=1&fit=1280%2C640&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F11%2FCopy-of-Copy-of-Copy-of-...-2-1.png&signature=d7923e8edd520c18c2373fbf63507ccd",
+            "publishedAt": "2019-11-27T13:14:56Z"
+        },
+        {
+            "author": "Yessi Bello Perez",
+            "title": "Judge orders Telegram founder Pavel Durov to testify over its crypto ICO",
+            "description": "Telegram’s founder and CEO Pavel Durov should testify in the US Securities Exchange Commission‘s (SEC) case against the company’s controversial digital token, a US federal judge has ruled. A document signed by District Judge P. Kevin Castel at the New York Southern District Court earlier this week, says Durov will be deposed “on January 7 […]",
+            "url": "https://thenextweb.com/hardfork/2019/11/27/telegram-founder-pavel-durov-testify-cryptocurrency-ico/",
+            "urlToImage": "https://img-cdn.tnwcdn.com/image/hardfork?filter_last=1&fit=1280%2C640&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F11%2Ftelegram-judge-court.jpg&signature=02dd2d557677291a7686678a9719e513",
+            "publishedAt": "2019-11-27T13:08:03Z"
+        },
+        {
+            "author": "Mix",
+            "title": "This YUGE font generator lets you write like Trump",
+            "description": "\"I WANT NOTHING. I WANT NOTHING,\" US President Donald Trump wrote in a note addressing US Ambassador Gordon Sondland's impeachment testimony. \"I WANT NO QUID PRO QUO.\"\r\n\r\nThe ...",
+            "url": "https://thenextweb.com/shareables/2019/11/27/donald-trump-font-generator-note/",
+            "urlToImage": "https://img-cdn.tnwcdn.com/image/tnw?filter_last=1&fit=1280%2C640&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F11%2FScreen-Shot-2019-11-27-at-1.49.07-PM.png&signature=e8c98e83f86081134fb311e6ca53b9c8",
+            "publishedAt": "2019-11-27T12:35:37Z"
+        },
+        {
+            "author": "The Conversation",
+            "title": "The sixth mass extinction has already claimed its first victims: Humans",
+            "description": "Nine human species walked the Earth 300,000 years ago. Now there is just one. The Neanderthals, Homo neanderthalensis, were stocky hunters adapted to Europe’s cold steppes. The related ...",
+            "url": "https://thenextweb.com/syndication/2019/11/27/the-sixth-mass-extinction-has-already-claimed-its-first-victims-humans/",
+            "urlToImage": "https://img-cdn.tnwcdn.com/image/tnw?filter_last=1&fit=1280%2C640&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F11%2Fs-copy-4.jpg&signature=fe35e982ebf9be1354e4a6ab8fe2dca2",
+            "publishedAt": "2019-11-27T12:45:58Z"
+        },
+        {
+            "author": "Ivan Mehta",
+            "title": "CHEAP: Don’t be a fool. Get Sony’s legendary WH-1000Xm3 cans for just $278",
+            "description": "Welcome to CHEAP, our series about things that are good, but most of all, cheap. CHEAP! There are times when you see a product and think “I may buy it because it’s good for its price.” Then, there are some products that you just have to get when they’re discounted. Sony’s famous WH-1000Xm3 wireless noise […]",
+            "url": "https://thenextweb.com/plugged/2019/11/27/cheap-dont-be-a-fool-get-sonys-legendary-wh-1000xm3-cans-for-just-278/",
+            "urlToImage": "https://img-cdn.tnwcdn.com/image/plugged?filter_last=1&fit=1280%2C640&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F11%2FSonydeal.jpg&signature=600bad209fe96b5d16443018e5c4a921",
+            "publishedAt": "2019-11-27T11:46:54Z"
+        },
+        {
+            "author": "Amanda Milligan",
+            "title": "How to make your brand’s content people-centric",
+            "description": "Content might be made up of words, pictures, code, and video. But good content is also made up of some kind of human connection, as well — it addresses a concern, taps into an emotion, or bonds through some sort of commonality. Content is created by people and for people (sorry, I think this is […]",
+            "url": "https://thenextweb.com/podium/2019/11/27/how-to-make-your-brands-content-people-centric/",
+            "urlToImage": "https://img-cdn.tnwcdn.com/image/podium?filter_last=1&fit=1280%2C640&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F11%2FUntitled-design15.png&signature=93af496108c203b4cb118f8ab990b086",
+            "publishedAt": "2019-11-27T11:00:24Z"
+        },
+        {
+            "author": "Cara Curtis",
+            "title": "Facebook's only fact-checker for Dutch news quits over political ad controversy",
+            "description": "Yesterday, the Dutch digital newspaper, NU.nl, which was Facebook’s only partner, cut ties with the social network and published a blog post, written by Gert-Jaap Heokman, NU.nl’s ...",
+            "url": "https://thenextweb.com/tech/2019/11/27/facebooks-only-fact-checker-for-dutch-news-quits-over-political-ad-controversy/",
+            "urlToImage": "https://img-cdn.tnwcdn.com/image/tnw?filter_last=1&fit=1280%2C640&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F11%2FCopy-of-Copy-of-Copy-of-...-1-6.png&signature=09336b1aa4529dd370a0391ede76f2a8",
+            "publishedAt": "2019-11-27T10:27:27Z"
+        }
+    ]
+}

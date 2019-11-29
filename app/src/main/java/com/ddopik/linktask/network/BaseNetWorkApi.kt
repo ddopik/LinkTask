@@ -35,16 +35,16 @@ class BaseNetWorkApi {
             "https://newsapi.org/v1/articles?source=associated-press&apiKey=533af958594143758318137469b41ba9"
 
 
-        fun getArticleList_1(): Observable<ArticlesResponse> {
+        fun getArticleList1(): Observable<ArticlesResponse> {
             return Rx2AndroidNetworking.get(ARTICLE_1_URL)
-                .responseOnlyIfCached
                 .build()
                 .getObjectObservable(ArticlesResponse::class.java)
 
 
-        }    fun getArticleList_2(): Observable<ArticlesResponse> {
+        }
+
+        fun getArticleList2(): Observable<ArticlesResponse> {
             return Rx2AndroidNetworking.get(ARTICLE_2_URL)
-                .responseOnlyIfCached
                 .build()
                 .getObjectObservable(ArticlesResponse::class.java)
 
@@ -85,7 +85,8 @@ class BaseNetWorkApi {
                         CipherSuite.TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,
                         CipherSuite.TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,
                         CipherSuite.TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,
-                        CipherSuite.TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA)
+                        CipherSuite.TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+                    )
                     .build()
 
 
@@ -100,9 +101,8 @@ class BaseNetWorkApi {
                 builder.connectionSpecs(Collections.singletonList(spec))
                 builder.hostnameVerifier { hostname: String?, session: SSLSession? -> true }
                 return builder.build()
-            }
-            catch(e:Exception) {
-                throw  RuntimeException (e);
+            } catch (e: Exception) {
+                throw  RuntimeException(e);
             }
         }
 

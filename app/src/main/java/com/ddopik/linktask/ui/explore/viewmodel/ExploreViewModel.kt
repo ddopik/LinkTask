@@ -42,7 +42,7 @@ class ExploreViewModel : ViewModel() {
     @SuppressLint("CheckResult")
      fun getArticlesList() { // here we are using zip operator to combine both request
         articlesStats.postValue(true)
-        Observable.zip(BaseNetWorkApi.getArticleList_1(), BaseNetWorkApi.getArticleList_2(),
+        Observable.zip(BaseNetWorkApi.getArticleList1(), BaseNetWorkApi.getArticleList2(),
             BiFunction<ArticlesResponse, ArticlesResponse, MutableList<Article>> { article_1, article_2 ->
 
 
